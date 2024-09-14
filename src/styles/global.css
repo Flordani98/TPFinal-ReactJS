@@ -22,15 +22,12 @@ input {
     padding: 0.3rem;
 }
 
-/* button{
+button{
     border: none;
     text-decoration: none;
     padding: .5rem;
     text-align: center;
     font-weight: bold;
     cursor: pointer;
-} */
+}
 
-/* button:hover{
- background-color: rgb(251, 255, 0);
-} */

@@ -6,24 +6,24 @@ import PropTypes from 'prop-types';
 const LoginPage = ({ }) => {
 	return (
 		<div className={styles.loginpage}>
-			<div>
+			{/* <div>
 				<button>Registrarse</button>
 				<button>Iniciar sesión</button>
-			</div>
+			</div> */}
 
 			<form>
-				<div className='form-group'>
+				<div className={styles['form-group']}>
 					<label htmlFor='email'>Email</label>
 					<input type='email' id='email' name='email' required />
 
 				</div>
 
-				<div className='formGroup'>
+				<div className={styles['form-group']}>
 					<label htmlFor='password'>Contraseña</label>
 					<input type='password' id='password' name='password' required />
 				</div>
 
-				<button className='btn-submit' type='submit'>Iniciar sesión</button>
+				<button className={styles['btn-submit']} type='submit'>Iniciar sesión</button>
 			</form>
 
 		</div>
