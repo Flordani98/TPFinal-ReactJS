@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useForm = (initialValue, callback) => {
+const useForm = (initialValue) => {
 
 
     const [values, setValues] = useState(initialValue);
@@ -16,10 +16,12 @@ const useForm = (initialValue, callback) => {
 	
 	};
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (callback) => {
+        return (e) =>{
         e.preventDefault();
+        console.log("handleSubmit called")
         callback();
-    }
+    }};
 
 
     return {

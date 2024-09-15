@@ -6,14 +6,19 @@ import fondoTrabajo from '../../assets/fondo-trabajo.jpg'
 import logoApp from '../../assets/logo-app.png'
 import { useForm } from '../../hooks';
 
-const LoginPage = ({ }) => {
-
+const LoginPage = ({ onLogin}) => {
 	
+	const{ values, handleChange, handleSubmit } = useForm({ email: "", password: "" });
+
 	const submitForm  = (e) => {
 		console.log(values);
-	};
+		console.log("submitForm called"); 
+		console.log(onLogin);
 
-	const{ values, handleChange, handleSubmit } = useForm({ email: "", password: "" }, submitForm)
+		onLogin();
+		console.log("login method called")
+
+	};
 
 	
 	return (
@@ -28,7 +33,7 @@ const LoginPage = ({ }) => {
 				<img className={styles['app-logo']} src={logoApp} alt="logo de empresa"></img>
 				<h3 className={styles['form-title']}>Inicio de sesión</h3>
 
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={ handleSubmit(submitForm) }>
 					<div className={styles['form-group']}>
 						<label htmlFor='email'>Email</label>
 						<input type='email' id='email' name='email' placeholder='Ingrese su email' required 
