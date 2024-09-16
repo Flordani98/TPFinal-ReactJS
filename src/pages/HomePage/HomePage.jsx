@@ -7,38 +7,84 @@ import imgHero from '../../assets/hero-home.jpg'
 
 const HomePage = ({ onLogout }) => {
 	return (
-		<div className='homepage'>
-			<header>
+		<div className={styles.homepage}>
+			<header className={styles.header}>
+				<a><img className={styles['logo-app']} src={logoApp} alt="Logo de la App"></img></a>
 
-				<nav>
-					<ul>
-						<li><a><img className={styles['logo-app']} src={logoApp} alt="Logo de la App"></img></a></li>
+				<nav className={styles['nav-container']}>
+					<ul className={styles['main-menu-nav']}>
 						<li><a>Inicio</a></li>
 						<li><a>Empleados</a></li>
 						<li><a>Sobre Nosotros</a></li>
 						<li><a>Contacto</a></li>
 						<li><a>Mi perfil</a></li>
 					</ul>
-					<button onClick={onLogout}>Salir</button>
 				</nav>
-
-				<div className={styles.hero}>
-
-					<section lassName={styles['hero-content']}>
-						<h1>Mi Manager App</h1>
-						<h2>Gestiona el talento de tu empresa en el menor tiempo</h2>
-						<p>Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
-					</section>
-					<img className={styles['hero-img']} src={imgHero} alt="Grupo de personas diversas que tienen una reunión de negocios "></img>
-
-				</div>
-
-
+				<button onClick={onLogout}>Salir</button>
 
 			</header>
 
 
-			HomePage works!
+			<section className={styles.hero}>
+
+				<div className={styles['hero-content']}>
+					<h1>Mi Manager App</h1>
+					<h2>Gestiona el talento de tu empresa en el menor tiempo</h2>
+					<p>Documenting web technologies, including CSS, HTML, and JavaScript, since 2005.</p>
+					<button>Empezar</button>
+				</div>
+				<img className={styles['hero-img']} src={imgHero} alt="Grupo de personas diversas que tienen una reunión de negocios "></img>
+
+			</section>
+
+
+			<footer className={styles.footer}>
+				<div className={styles['footer-principal']}>
+
+					<div className={styles['footer-logo-social']} >
+
+						<div className={styles['footer-logo']}>
+							<a><img className={styles['logo-app']} src={logoApp} alt="Logo de la App"></img></a>
+							<p>Consectetur adipiscing elit. Cras mollis </p>
+
+						</div>
+
+						<nav className={styles['social-icons']}>
+							<a href="https://facebook.com" >F</a>
+							<a href="https://twitter.com" >T</a>
+							<a href="https://linkedin.com">I</a>
+							<a>W</a>
+						</nav>
+
+					</div>
+
+					<div className={styles["footer-links"]}>
+						<h3>Enlaces Rápidos</h3>
+						<ul>
+							<li><a href="#inicio">Inicio</a></li>
+							<li><a href="#empleados">Empleados</a></li>
+							<li><a href="#contacto">Contacto</a></li>
+							<li><a href="#privacidad">Política de Privacidad</a></li>
+						</ul>
+					</div>
+
+					<div className={styles["footer-links"]}>
+						<h3>Enlaces Adicionales</h3>
+						<ul>
+							<li><a href="#about">Acerca de</a></li>
+							<li><a href="#services">Servicios</a></li>
+							<li><a href="#faq">FAQ</a></li>
+							<li><a href="#support">Soporte</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div className={styles["footer-bottom"]}>
+					<p>&copy; 2024 Mi Manager App. Todos los derechos reservados.</p>
+				</div>
+
+			</footer>
+
 		</div>
 	);
 };
