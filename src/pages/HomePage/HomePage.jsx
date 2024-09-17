@@ -4,8 +4,22 @@ import styles from './HomePage.module.css';
 import PropTypes from 'prop-types';
 import logoApp from '../../assets/logo-app.png'
 import imgHero from '../../assets/hero-home.jpg'
+import { useAuth } from '../../hooks';
+import { useNavigate } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
-const HomePage = ({ onLogout }) => {
+const HomePage = ({  }) => {
+
+
+	const {logout} = useAuth();
+	const navigate = useNavigate();
+
+	const handleExitClick = () => {
+		logout();
+		navigate("/")
+	}
+
+
 	return (
 		<div className={styles.homepage}>
 			<header className={styles.header}>
@@ -13,14 +27,14 @@ const HomePage = ({ onLogout }) => {
 
 				<nav className={styles['nav-container']}>
 					<ul className={styles['main-menu-nav']}>
-						<li><a>Inicio</a></li>
-						<li><a>Empleados</a></li>
-						<li><a>Sobre Nosotros</a></li>
-						<li><a>Contacto</a></li>
-						<li><a>Mi perfil</a></li>
+						<li><NavLink to="/home" activeclassname="active" >Inicio</NavLink></li>
+						<li><NavLink to="/empleados" activeclassname="active" >Empleados</NavLink></li>
+						<li><NavLink to="/nosotros" activeclassname="active"  >Sobre Nosotros</NavLink></li>
+						<li><NavLink to="/contacto" activeclassname="active"  >Contacto</NavLink></li>
+						<li><NavLink to="/mi-perfil" activeclassname="active"  >Mi perfil</NavLink></li>
 					</ul>
 				</nav>
-				<button onClick={onLogout}>Salir</button>
+				<button onClick={handleExitClick}>Salir</button>
 
 			</header>
 

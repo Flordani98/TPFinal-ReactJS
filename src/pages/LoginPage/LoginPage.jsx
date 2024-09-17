@@ -4,19 +4,24 @@ import styles from './LoginPage.module.css';
 import PropTypes from 'prop-types';
 import fondoTrabajo from '../../assets/fondo-trabajo.jpg'
 import logoApp from '../../assets/logo-app.png'
-import { useForm } from '../../hooks';
+import { useAuth, useForm } from '../../hooks';
+import { Navigate, useNavigate } from 'react-router-dom';
 
-const LoginPage = ({ onLogin}) => {
+const LoginPage = ({ }) => {
 	
+	const navigate = useNavigate();
 	const{ values, handleChange, handleSubmit } = useForm({ email: "", password: "" });
 
-	const submitForm  = (e) => {
-		console.log(values);
-		console.log("submitForm called"); 
-		console.log(onLogin);
+	const { loading, isLoggedIn, login } = useAuth();
 
-		onLogin();
-		console.log("login method called")
+	if(isLoggedIn){
+		return <Navigate to="/home" />
+	}
+
+
+	const submitForm  = async (e) => {
+		await login();
+		navigate("/home");
 
 	};
 
