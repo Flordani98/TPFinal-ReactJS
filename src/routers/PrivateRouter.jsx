@@ -1,9 +1,9 @@
 import { Navigate } from 'react-router-dom';
-import {useAuth} from '../hooks';
+import { useAuthContext } from '../context/AuthContext';
 
 const PrivateRouter = ({children}) => {
 
-    const { isLoggedIn, loading } = useAuth();
+    const { isLoggedIn, loading } = useAuthContext();
 
     if(loading) return <div>Loading...</div>
 

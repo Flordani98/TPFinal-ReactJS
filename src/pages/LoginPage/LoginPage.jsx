@@ -4,15 +4,17 @@ import styles from './LoginPage.module.css';
 import PropTypes from 'prop-types';
 import fondoTrabajo from '../../assets/fondo-trabajo.jpg'
 import logoApp from '../../assets/logo-app.png'
-import { useAuth, useForm } from '../../hooks';
+import {useForm } from '../../hooks';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { useAuthContext } from '../../context/AuthContext';
 
 const LoginPage = ({ }) => {
+
 	
 	const navigate = useNavigate();
 	const{ values, handleChange, handleSubmit } = useForm({ email: "", password: "" });
 
-	const { loading, isLoggedIn, login } = useAuth();
+	const { loading, isLoggedIn, login } = useAuthContext();
 
 	if(isLoggedIn){
 		return <Navigate to="/home" />
@@ -22,7 +24,6 @@ const LoginPage = ({ }) => {
 	const submitForm  = async (e) => {
 		await login();
 		navigate("/home");
-
 	};
 
 	

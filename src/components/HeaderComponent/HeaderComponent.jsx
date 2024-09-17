@@ -2,14 +2,15 @@
 import React from 'react';
 import styles from './HeaderComponent.module.css';
 import PropTypes from 'prop-types';
-import { useAuth } from '../../hooks';
 import { useNavigate } from 'react-router-dom';
 import { NavLink} from 'react-router-dom';
 import logoApp from '../../assets/logo-app.png'
+import { useAuthContext } from '../../context/AuthContext';
+
 
 const HeaderComponent = ({ }) => {
 	
-	const {logout} = useAuth();
+	const { logout } = useAuthContext();
 	const navigate = useNavigate();
 
 
