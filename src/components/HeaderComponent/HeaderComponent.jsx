@@ -25,11 +25,11 @@ const HeaderComponent = ({ }) => {
 
 			<nav className={styles['nav-container']}>
 				<ul className={styles['main-menu-nav']}>
-					<li><NavLink to="/home" activeclassname="active" >Inicio</NavLink></li>
-					<li><NavLink to="/empleados" activeclassname="active" >Empleados</NavLink></li>
-					<li><NavLink to="/nosotros" activeclassname="active"  >Sobre Nosotros</NavLink></li>
-					<li><NavLink to="/contacto" activeclassname="active"  >Contacto</NavLink></li>
-					<li><NavLink to="/mi-perfil" activeclassname="active"  >Mi perfil</NavLink></li>
+					<li><NavLink to="/home" className={styles['nav-link']} activeclassname="active" >Inicio</NavLink></li>
+					<li><NavLink to="/empleados" className={styles['nav-link']} activeclassname="active" >Empleados</NavLink></li>
+					<li><NavLink to="/nosotros" className={styles['nav-link']} activeclassname="active"  >Sobre Nosotros</NavLink></li>
+					<li><NavLink to="/contacto" className={styles['nav-link']} activeclassname="active"  >Contacto</NavLink></li>
+					<li><NavLink to="/mi-perfil" className={styles['nav-link']} activeclassname="active"  >Mi perfil</NavLink></li>
 				</ul>
 			</nav>
 			<button onClick={handleExitClick}>Salir</button>

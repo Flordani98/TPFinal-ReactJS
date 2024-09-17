@@ -1,4 +1,9 @@
 :root{
     --checkbox-focus-color: rgb(144, 218, 227);
     --input-submit-color: rgb(149, 229, 240);
+    
+    --primary-color: rgb(215, 240, 243);
+    --secondary-color: rgb(149, 229, 240);
+    --terciary-color:  #296b81;
+    --font-color: black;
 }

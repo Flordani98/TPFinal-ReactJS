@@ -15,6 +15,8 @@ const EmployeesTable = ({ employees }) => {
 					<th>Nombre</th>
 					<th>Posición</th>
 					<th>Departamento</th>
+					<th></th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>

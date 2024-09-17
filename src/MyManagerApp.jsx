@@ -5,14 +5,12 @@ import { AuthProvider } from './context/AuthContext'
 
 
 const MyManagerApp = () => {
-
   return (
     <AuthProvider>
       <AppRouter></AppRouter>
     </AuthProvider>
 
   )
-
 }
 
 export default MyManagerApp

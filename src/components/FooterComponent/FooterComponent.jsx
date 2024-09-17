@@ -48,7 +48,7 @@ const FooterComponent = ({ }) => {
 			</div>
 
 			<div className={styles["footer-bottom"]}>
-				<p>&copy; 2024 Mi Manager App. Todos los derechos reservados.</p>
+				<p>&copy; 2024 My Manager App. Todos los derechos reservados.</p>
 			</div>
 
 		</footer>

@@ -1,7 +1,9 @@
 
 .hero {
     position: relative;
-    background-color: #333;
+    background-color: var(--primary-color);
+    padding-top: 3rem;
+
 }
 
 .hero-content {

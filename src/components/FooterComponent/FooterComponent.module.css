@@ -1,8 +1,7 @@
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--font-color);
     padding: 2rem 1rem;
-
 }
 
 .social-icons {
@@ -46,7 +45,7 @@
 }
 
 .footer-links, .social-icons a:hover {
-    color: #ddd;
+    color: var(--font-color);
 }
 
 .footer-bottom {

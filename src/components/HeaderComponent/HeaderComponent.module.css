@@ -1,10 +1,13 @@
 .header {
     display: flex;
     flex-direction: row;
-    background-color: var(--input-submit-color);
+    background-color: var(--primary-color);
     padding: 0 1rem;
     align-items: center;
     height: 4rem;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 
 .logo-app {
@@ -30,3 +33,32 @@
 .header button {
     margin: .6rem 0;
 }
+
+
+.nav-link{
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--terciary-color);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link:hover::before{
+    transform: scaleX(1);
+  }
+  
+  /* .nav-link.active::before {
+    background-color: white;
+    transform: scaleX(1);
+  } */
