@@ -54,3 +54,14 @@ button{
     color: white;
     text-decoration: underline;
 }
+
+table{
+    margin: 20px 0;
+    text-align: left;
+}
+
+td{
+    background-color: rgb(174, 252, 245);
+    padding: .5rem;
+    text-align: left;
+}
