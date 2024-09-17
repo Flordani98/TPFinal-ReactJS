@@ -2,12 +2,13 @@
 import React from 'react';
 import styles from './PublicLayout.module.css';
 import PropTypes from 'prop-types';
+import { Outlet } from 'react-router-dom';
 
-const PublicLayout = ({children}) => {
+const PublicLayout = ({}) => {
 	return (
 		<div className={styles.publiclayout}>
 		public layout works
- 			{children}
+		<Outlet/>
  		</div>
 	);
 };

@@ -12,34 +12,32 @@ const AppRouter = () => {
     return (
         <Router>
             <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <PublicLayout>
+                {/* Rutas Públicas */}
+                <Route path="/" element={<PublicLayout />}>
+                    <Route
+                        path="/"
+                        element={
                             <LoginPage />
-                        </PublicLayout>
-                    } />
-                <Route
-                    path="/home"
-                    element={
-                        <PrivateRouter>
-                            <PrivateLayout>
-                                <HomePage />
-                            </PrivateLayout>
-                        </PrivateRouter>
-                    } />
-                <Route
-                    path="/empleados"
-                    element={
+                        } />
+                </Route>
 
-                        <PrivateRouter>
-                            <PrivateLayout>
-                                <EmployeesPage />
-                            </PrivateLayout>
-                        </PrivateRouter>
+                {/* Rutas Privadas */}
+                <Route path="/" element={<PrivateRouter><PrivateLayout /></PrivateRouter>}>
 
-                    } />
-                <Route path="*" element={<NotFoundPage/>}/>
+                    <Route
+                        path="/home"
+                        element={
+                            <HomePage />
+                        } />
+                    <Route
+                        path="/empleados"
+                        element={
+                            <EmployeesPage />
+                        } />
+                </Route>
+
+                <Route path="*" element={<NotFoundPage />} />
+
             </Routes>
         </Router>
     );

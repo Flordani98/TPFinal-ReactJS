@@ -4,13 +4,15 @@ import styles from './PrivateLayout.module.css';
 import PropTypes from 'prop-types';
 import HeaderComponent from '../../components/HeaderComponent/HeaderComponent';
 import FooterComponent from '../../components/FooterComponent/FooterComponent';
+import { Outlet } from 'react-router-dom';
 
-const PrivateLayout = ({ children }) => {
+
+const PrivateLayout = ({ }) => {
 	return (
 		<div className={styles.privatelayout}>
 			<HeaderComponent />
 			<main>
-				{children}
+				<Outlet/>
 			</main>
 			<FooterComponent />
 		</div>
