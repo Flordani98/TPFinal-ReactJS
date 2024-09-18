@@ -6,6 +6,7 @@ import PublicLayout from "../layouts/PublicLayout/PublicLayout";
 import PrivateLayout from "../layouts/PrivateLayout/PrivateLayout";
 import PrivateRouter from "./PrivateRouter";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import ViewEmployee from "../components/Employees/ViewEmployee/ViewEmployee";
 
 
 const AppRouter = () => {
@@ -34,6 +35,8 @@ const AppRouter = () => {
                         element={
                             <EmployeesPage />
                         } />
+
+                    <Route path="/empleados/:id" element={<ViewEmployee />} />
                 </Route>
 
                 <Route path="*" element={<NotFoundPage />} />

@@ -1,0 +1,22 @@
+.viewemployee {
+  padding: 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.attributeEmployee{
+    padding: .5rem;
+    width: 50%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewemployee button{
+    width: 30%;
+    margin: 0 auto;
+}
