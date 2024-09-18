@@ -1,0 +1,104 @@
+{
+    "employees": [
+        {
+            "id": "1",
+            "name": "Ana Martinez",
+            "position": "Recursos humanos",
+            "department": "RRHH",
+            "email": "ana.martinez@empresa.com",
+            "phone": "1235678911"
+        },
+        {
+            "id": "2",
+            "name": "Luis Fernandez",
+            "position": "Administrador de sistemas",
+            "department": "Tecnología",
+            "email": "luis.fernandez@empresa.com",
+            "phone": "123555789"
+        }
+        ,        {
+            "id": "3",
+            "name": "Laura Garcia",
+            "position": "Coordinador de proyectos",
+            "department": "Operaciones",
+            "email": "laura_garcia@empresa.com",
+            "phone": "1235678952"
+        },
+        {
+            "id": "4",
+            "name": "Jorge Díaz",
+            "position": "Especialista en ventas",
+            "department": "Ventas",
+            "email": "jorge.diaz@empresa.com",
+            "phone": "123555789"
+        },
+        {
+            "id": "5",
+            "name": "María López",
+            "position": "Analista Financiero",
+            "department": "Finanzas",
+            "email": "maria.lopez@empresa.com",
+            "phone": "1235678943"
+        },
+        {
+            "id": "6",
+            "name": "Pedro Sanchez",
+            "position": "Desarrollador Full Stack",
+            "department": "Tecnología",
+            "email": "pedro.sanchez@empresa.com",
+            "phone": "1235678976"
+        },
+        {
+            "id": "7",
+            "name": "Carla Ramírez",
+            "position": "Diseñadora Gráfica",
+            "department": "Marketing",
+            "email": "carla.ramirez@empresa.com",
+            "phone": "1235678901"
+        },
+        {
+            "id": "8",
+            "name": "Diego Alvarez",
+            "position": "Gerente de Operaciones",
+            "department": "Operaciones",
+            "email": "diego.alvarez@empresa.com",
+            "phone": "1235678922"
+        },
+        {
+            "id": "9",
+            "name": "Elena Torres",
+            "position": "Consultora de Recursos Humanos",
+            "department": "RRHH",
+            "email": "elena.torres@empresa.com",
+            "phone": "1235678934"
+        },
+        {
+            "id": "10",
+            "name": "Santiago Ortega",
+            "position": "Ejecutivo de Cuentas",
+            "department": "Ventas",
+            "email": "santiago.ortega@empresa.com",
+            "phone": "1235678965"
+        }
+    ],
+    "users": [
+        {
+            "id": "1",
+            "username": "Laura Garcia",
+            "email": "laura_garcia@empresa.com",
+            "password": "coordoperaciones"
+        },
+        {
+            "id": "2",
+            "username": "Jorge Díaz",
+            "email": "jorge.diaz@empresa.com",
+            "password": "equipoventas"
+        },
+        {
+            "id": "3",
+            "username": "flordani98",
+            "email": "flordani98@gmail.com",
+            "password": "florencia98"
+        }
+    ]
+}

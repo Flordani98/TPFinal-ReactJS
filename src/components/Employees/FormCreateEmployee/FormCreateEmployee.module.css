@@ -1,3 +1,6 @@
-.formcreateemployee {
-  
+
+.btn-submit:hover {
+
+    background-color: var(--input-submit-color);
+    transition: ease 200ms;
 }

@@ -16,13 +16,15 @@ const LoginPage = ({ }) => {
 
 	const { loading, isLoggedIn, login } = useAuthContext();
 
+
 	if(isLoggedIn){
 		return <Navigate to="/home" />
 	}
 
 
 	const submitForm  = async (e) => {
-		await login();
+
+		await login(user);
 		navigate("/home");
 	};
 

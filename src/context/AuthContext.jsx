@@ -27,8 +27,8 @@ export const AuthProvider = ( {children}) => {
         await sleep(2000);
 
         // let token = userData.id;
-        let token = "asdasdsada";
-        localStorage.setItem("token", token);
+        let fakeToken = "12323232";
+        localStorage.setItem("token", fakeToken);
 
         setIsLoggedIn(true);
         setUser(userData);

@@ -36,7 +36,7 @@ const EmployeesPage = ({ }) => {
 		<div className={styles.employeespage}>
 
 			{showForm ? (
-				<FormCreateEmployee onClose={handleCloseForm} />
+				<FormCreateEmployee onClose={handleCloseForm} onActionComplete={reloadEmployees}  />
 			) : (
 				<>
 					<h1>Lista de empleados</h1>
