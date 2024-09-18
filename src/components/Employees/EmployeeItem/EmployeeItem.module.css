@@ -3,3 +3,7 @@
     padding: .5rem;
     text-align: left;
 }
+.deletebutton:hover{
+    background-color: rgb(218, 95, 95);
+
+}

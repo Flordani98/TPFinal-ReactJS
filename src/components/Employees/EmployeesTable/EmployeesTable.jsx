@@ -4,7 +4,7 @@ import styles from './EmployeesTable.module.css';
 import PropTypes from 'prop-types';
 import EmployeeItem from '../EmployeeItem/EmployeeItem';
 
-const EmployeesTable = ({ employees }) => {
+const EmployeesTable = ({ employees, onActionComplete  }) => {
 
 
 	return (
@@ -23,7 +23,7 @@ const EmployeesTable = ({ employees }) => {
 
 				{
 					employees.map((employee) => (
-						<EmployeeItem key={employee.id} employee={employee} />
+						<EmployeeItem key={employee.id} employee={employee} onActionComplete={onActionComplete} />
 					))
 				}
 			</tbody>

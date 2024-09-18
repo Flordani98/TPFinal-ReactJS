@@ -9,7 +9,28 @@ const capitalizeFirstLetter = (string) => {
 };
 
 
-const EmployeeItem = ({ employee }) => {
+
+const EmployeeItem = ({ employee,  onActionComplete }) => {
+
+	const deleteEmployee = async (id) =>{
+		console.log("deleting user", id);
+	
+		try{
+			const response = await fetch(`http://localhost:3000/employees/${id}`, {
+				method: "DELETE",
+			});
+	
+			if(!response.ok){
+				return;
+			}
+	
+			onActionComplete();
+	
+		} catch {
+			console.log("error")
+		}
+	}
+	
 
 	return (
 		<tr className={styles.employeeitem}>
@@ -17,7 +38,7 @@ const EmployeeItem = ({ employee }) => {
 				<td>{capitalizeFirstLetter(employee.position)}</td>
 				<td>{capitalizeFirstLetter(employee.department)}</td>
 			<td><button>Ver detalles</button></td>
-			<td><button>Eliminar</button></td>
+			<td><button className={styles.deletebutton} onClick={() => deleteEmployee(employee.id)}>Eliminar</button></td>
 		</tr>
 	);
 };
